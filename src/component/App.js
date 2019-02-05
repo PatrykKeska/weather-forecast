@@ -60,6 +60,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <h1>Weather Forecast</h1>
         <Form click={this.handleFindClick} change={this.handleInputChange} value={this.state.value} />
         <Result weather={this.state} />
 

@@ -4,11 +4,12 @@ import '../component/Form.css'
 const Form = (props) => {
 
     return (
+
         <form className="form" onSubmit={props.click}>
             <input value={props.value} onChange={props.change} type="text"
-                placeholder='nazwa miasta...'
+                placeholder='type a city name...'
             />
-            <button >Szukaj </button>
+            <button >Search</button>
 
         </form>
     )

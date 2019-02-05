@@ -6,10 +6,11 @@
 
 .form button {
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid white;
     padding: 5px 20px;
     background-color: royalblue;
     border-radius: 10px;
     color: white;
-
+    font-weight: bold;
+    box-shadow: 0 0 0px 2px royalblue
 }

@@ -1,8 +1,9 @@
 body {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
   padding: 10vh;
+  overflow-x: hidden;
 
 }
