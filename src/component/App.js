@@ -14,6 +14,8 @@ class App extends Component {
     temperature: ' ',
     pressure: ' ',
     wind: ' ',
+    icon: ' ',
+    description: ' ',
     error: false,
   }
 
@@ -34,7 +36,6 @@ class App extends Component {
         }
         throw Error('Can not find that city')
       }).then(response => response.json())
-      // .then(data => console.log(data))
       .then(data =>
         this.setState({
           date: date,
@@ -44,6 +45,8 @@ class App extends Component {
           temperature: data.main.temp.toFixed(0),
           pressure: data.main.pressure,
           wind: data.wind.speed,
+          description: data.weather[0].description,
+          icon: data.weather[0].icon,
           error: false,
         }))
 

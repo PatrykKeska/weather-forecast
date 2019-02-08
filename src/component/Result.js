@@ -1,5 +1,6 @@
 import React from 'react'
 import '../component/Result.css'
+// import icon from './icons'
 
 const Result = (props) => {
 
@@ -10,9 +11,14 @@ const Result = (props) => {
         , temperature
         , pressure
         , wind
+        , icon
+        , description
         , error } = props.weather;
 
     let content = null;
+
+    let weatherIcon = `http://openweathermap.org/img/w/${icon}.png`;
+
 
 
     if (city && !error) {
@@ -21,6 +27,8 @@ const Result = (props) => {
         content = (
             <div className="weatherResult">
                 <p>Search results for : <strong>{city}</strong>  on {date} </p>
+                <img src={weatherIcon} alt="weather Icon" />
+                <p>{description}</p>
                 <p><em>Temperature </em>: {temperature} °C</p>
                 <p><em>Pressure </em>  : {pressure} hPa</p>
                 <p><em>Wind</em> : {wind} m/s</p>
