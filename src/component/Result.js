@@ -16,7 +16,6 @@ const Result = (props) => {
         , error } = props.weather;
 
     let content = null;
-
     let weatherIcon = `http://openweathermap.org/img/w/${icon}.png`;
 
 
@@ -27,7 +26,7 @@ const Result = (props) => {
         content = (
             <div className="weatherResult">
                 <p>Search results for : <strong>{city}</strong>  on {date} </p>
-                <img src={weatherIcon} alt="weather Icon" />
+                <img className='weatherIcon' src={weatherIcon} alt="weather Icon" />
                 <p>{description}</p>
                 <p><em>Temperature </em>: {temperature} °C</p>
                 <p><em>Pressure </em>  : {pressure} hPa</p>
