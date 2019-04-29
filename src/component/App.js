@@ -27,7 +27,7 @@ class App extends Component {
 
   handleFindClick = (e) => {
     e.preventDefault();
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=a9d859ae3b80fbcd7fa5b0c20002adf5&units=metric`
+    const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=a9d859ae3b80fbcd7fa5b0c20002adf5&units=metric`
     const date = new Date().toLocaleString();
     fetch(API)
       .then(response => {
