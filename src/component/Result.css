@@ -26,3 +26,9 @@
 .weatherResult em {
     color: green;
 }
+
+
+.weatherIcon {
+    width: 20%;
+    height: 20%;
+}
